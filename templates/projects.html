@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Projects</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/projects">Projects</a>
+        <a href="/education">Education</a>
+    </nav>
+    <main>
+        <form action="/projects" method="get">
+            <input type="text" name="technology" placeholder="Filter by technology (Java, Node.js, C++)...">
+            <input type="submit" value="Filter">
+        </form>
+        {% for category, cat_projects in projects.items() %}
+            <section>
+                <h2>{{ category }} Projects</h2>
+                {% for project in cat_projects %}
+                    <div class="project">
+                        <h3>{{ project['name'] }}</h3>
+                        <p><strong>Objective:</strong> {{ project['objective'] }}</p>
+                        <p><strong>Technologies Used:</strong> {{ project['technologies'] }}</p>
+                        <p><strong>Features:</strong> {{ project['features'] }}</p>
+                        <p><strong>Outcome:</strong> {{ project['outcome'] }}</p>
+                    </div>
+                {% endfor %}
+            </section>
+        {% endfor %}
+    </main>
+    <footer>
+        <p>© 2024 All rights reserved.</p>
+    </footer>
+</body>
+</html>

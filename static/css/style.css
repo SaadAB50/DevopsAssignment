@@ -1,0 +1,163 @@
+/* General body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: #444;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    margin: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+section.intro {
+    margin-bottom: 20px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+}
+
+.feature-box {
+    width: 30%;
+    padding: 20px;
+    background: #e2e2e2;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.feature-box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8em;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+    }
+
+    .feature-box {
+        margin-bottom: 20px;
+        width: auto;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    main {
+        margin: 10px;
+    }
+}
+.feature-box {
+    display: block;
+    text-align: center;
+    color: inherit;  /* Ensures text colors are inherited and not defaulted to blue */
+    text-decoration: none; /* Removes underline from links */
+    background: #e2e2e2;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.education-detail {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-left: 5px solid #5cb85c;
+}
+
+.education-detail h2 {
+    color: #333;
+}
+
+.education-detail p {
+    margin: 10px 0;
+    line-height: 1.8;
+}
+.project {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.project h2 {
+    color: #333;
+}
+
+input[type="text"], input[type="submit"] {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+form {
+    margin-bottom: 20px;
+}
