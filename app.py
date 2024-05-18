@@ -60,16 +60,15 @@ def home():
 
 @app.route('/projects')
 def projects_view():
-    tech_filter = request.args.get('technology')
-    if tech_filter:
-        filtered_projects = {tech: projs for tech, projs in projects.items() if tech.lower() == tech_filter.lower()}
-    else:
-        filtered_projects = projects
-    return render_template('projects.html', projects=filtered_projects)
+    return render_template('projects.html')
 
 @app.route('/education')
 def education_view():
     return render_template('education.html')
+
+@app.route('/certifications')
+def certifications_view():
+    return render_template('certifications.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
